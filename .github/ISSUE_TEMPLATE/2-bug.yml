@@ -1,0 +1,38 @@
+name: 버그
+description: 기대와 다르게 동작하는 것을 고친다
+title: "[fix] "
+labels: ["type:fix"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: 영역
+      options: [web, api, judge, ai, infra, content, docs]
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: 현상
+      description: 무엇이 잘못되었는지
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 재현 방법
+      value: |
+        1. 
+        2. 
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 기대 동작
+  - type: textarea
+    id: env
+    attributes:
+      label: 환경과 로그
+      description: 브라우저·OS, 커밋 해시, 에러 메시지. 비밀값과 비공개 테스트 입력은 지우고 붙인다
+      render: text

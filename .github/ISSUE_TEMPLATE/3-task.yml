@@ -1,0 +1,24 @@
+name: 작업
+description: 문서, 조사, 설정, 문제 제작처럼 기능이 아닌 일
+title: "[task] "
+labels: ["type:chore"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: 영역
+      options: [web, api, judge, ai, infra, content, docs]
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: 할 일
+      value: |
+        - [ ] 
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: 참고

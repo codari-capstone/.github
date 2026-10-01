@@ -1,0 +1,32 @@
+name: 기능
+description: 새 기능이나 화면, API를 만든다
+title: "[feat] "
+labels: ["type:feat"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: 영역
+      options: [web, api, judge, ai, infra, content, docs]
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: 목적
+      description: 왜 필요한지, 계획서나 AI_FEATURES.md의 어느 항목인지
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: 완료 조건
+      description: 리뷰어가 확인할 수 있는 체크리스트
+      value: |
+        - [ ] 
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: 참고
